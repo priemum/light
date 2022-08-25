@@ -7,7 +7,7 @@ var config = require('../config.js');
 module.exports = {
   run: async (client, message, args, db) => { 
     let owners = [];
-    config.developers.forEach(id => {
+    config.developers.forEach(id => {                    
       let user = client.users.cache.get(id);
       if (user) owners.push(user.tag);
     });
